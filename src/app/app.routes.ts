@@ -1,16 +1,16 @@
 import { Routes } from '@angular/router';
-import { DeHomeComponent } from './de/de-home/de-home.component';
-import { DeAboutComponent } from './de/de-about/de-about.component';
-import { DeContactComponent } from './de/de-contact/de-contact.component';
-import { DeCvComponent } from './de/de-cv/de-cv.component';
-import { DeProjectsComponent } from './de/de-projects/de-projects.component';
-import { DeFeedbackComponent } from './de/de-feedback/de-feedback.component';
-import { EnHomeComponent } from './en/en-home/en-home.component';
-import { EnAboutComponent } from './en/en-about/en-about.component';
-import { EnContactComponent } from './en/en-contact/en-contact.component';
-import { EnCvComponent } from './en/en-cv/en-cv.component';
-import { EnProjectsComponent } from './en/en-projects/en-projects.component';
-import { EnFeedbackComponent } from './en/en-feedback/en-feedback.component';
+import { DeHomeComponent } from './de/pages/de-home/de-home.component';
+import { DeAboutComponent } from './de/pages/de-about/de-about.component';
+import { DeContactComponent } from './de/pages/de-contact/de-contact.component';
+import { DeCvComponent } from './de/pages/de-cv/de-cv.component';
+import { DeProjectsComponent } from './de/pages/de-projects/de-projects.component';
+import { DeFeedbackComponent } from './de/pages/de-feedback/de-feedback.component';
+import { EnHomeComponent } from './en/pages/en-home/en-home.component';
+import { EnAboutComponent } from './en/pages/en-about/en-about.component';
+import { EnContactComponent } from './en/pages/en-contact/en-contact.component';
+import { EnCvComponent } from './en/pages/en-cv/en-cv.component';
+import { EnProjectsComponent } from './en/pages/en-projects/en-projects.component';
+import { EnFeedbackComponent } from './en/pages/en-feedback/en-feedback.component';
 
 export const routes: Routes = [
     { path: 'de/start', component: DeHomeComponent},
