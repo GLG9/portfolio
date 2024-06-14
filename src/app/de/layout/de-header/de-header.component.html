@@ -1,1 +1,36 @@
-<p>de-header works!</p>
+<nav id="header">
+    <div class="nav-logo">
+        <p class="nav-name">Gissy</p>
+        <span>.</span>
+    </div>
+    <div class="nav-menu" id="myNavMenu">
+        <ul class="nav_menu_list">
+            <li class="nav_list">
+                <a href="de-start" class="nav-link active-link">Home</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a href="de/über-mich" class="nav-link">Über-mich</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a href="de/projekte" class="nav-link">Projekte</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a href="de/kontakt" class="nav-link">Kontakt</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a href="de/feedback" class="nav-link">Feedback</a>
+                <div class="circle"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="nav-button">
+        <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
+    </div>
+    <div class="nav-menu-btn">
+        <i class="uil uil-bars" (click)="myMenuFunction()"></i>
+    </div>
+  </nav>

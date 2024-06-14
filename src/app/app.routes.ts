@@ -13,12 +13,12 @@ import { EnProjectsComponent } from './en/pages/en-projects/en-projects.componen
 import { EnFeedbackComponent } from './en/pages/en-feedback/en-feedback.component';
 
 export const routes: Routes = [
-    { path: 'de/start', component: DeHomeComponent},
+    { path: 'de/home', component: DeHomeComponent},
     { path: 'de/über-mich', component: DeAboutComponent},
     { path: 'de/kontakt', component: DeContactComponent},
     { path: 'de/lebenslauf', component: DeCvComponent},
     { path: 'de/projekte', component: DeProjectsComponent},
-    { path: 'de/rückmeldung', component: DeFeedbackComponent},
+    { path: 'de/feedback', component: DeFeedbackComponent},
 
     { path: 'en/home', component: EnHomeComponent},
     { path: 'en/about', component: EnAboutComponent},
@@ -34,12 +34,12 @@ export const routes: Routes = [
     { path: 'en/projekte', redirectTo: 'en/project', pathMatch: 'full' },
     { path: 'en/rückmeldung', redirectTo: 'en/feedback', pathMatch: 'full' },
 
-    { path: 'start', redirectTo: 'de/start', pathMatch: 'full' },
+    { path: 'start', redirectTo: 'de/home', pathMatch: 'full' },
     { path: 'über-mich', redirectTo: 'de/über-mich', pathMatch: 'full' },
     { path: 'kontakt', redirectTo: 'de/kontakt', pathMatch: 'full' },
     { path: 'lebenslauf', redirectTo: 'de/lebenslauf', pathMatch: 'full' },
     { path: 'projekte', redirectTo: 'de/projekte', pathMatch: 'full' },
-    { path: 'rückmeldung', redirectTo: 'de/rückmeldung', pathMatch: 'full' },
+    { path: 'feedback', redirectTo: 'de/feedback', pathMatch: 'full' },
 
     { path: 'home', redirectTo: 'en/home', pathMatch: 'full' },
     { path: 'about', redirectTo: 'en/about', pathMatch: 'full' },
@@ -48,16 +48,16 @@ export const routes: Routes = [
     { path: 'projects', redirectTo: 'en/projects', pathMatch: 'full' },
     { path: 'feedback', redirectTo: 'en/feedback', pathMatch: 'full' },
 
-    { path: 'de/home', redirectTo: 'de/start', pathMatch: 'full' },
+    { path: 'de/home', redirectTo: 'de/home', pathMatch: 'full' },
     { path: 'de/about', redirectTo: 'de/über-mich', pathMatch: 'full' },
     { path: 'de/contact', redirectTo: 'de/kontakt', pathMatch: 'full' },
     { path: 'de/cv', redirectTo: 'de/lebenslauf', pathMatch: 'full' },
     { path: 'de/projects', redirectTo: 'de/projekte', pathMatch: 'full' },
-    { path: 'de/feedback', redirectTo: 'de/rückmeldung', pathMatch: 'full' },
+    { path: 'de/feedback', redirectTo: 'de/feedback', pathMatch: 'full' },
 
-    { path: 'de', redirectTo: 'de/start', pathMatch: 'full' },
+    { path: 'de', redirectTo: 'de/home', pathMatch: 'full' },
     { path: 'en', redirectTo: 'en/home', pathMatch: 'full' },
-    { path: '**', redirectTo: 'de/start', pathMatch: 'full' },
-    { path: '', redirectTo: 'de/start', pathMatch: 'full' },
+    { path: '**', redirectTo: 'de/home', pathMatch: 'full' },
+    { path: '', redirectTo: 'de/home', pathMatch: 'full' },
 
 ];
