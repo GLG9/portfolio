@@ -67,3 +67,28 @@
 
 .icon:hover
     color: var(--first-color)
+
+.featured-image
+    display: flex
+    justify-content: right
+    align-content: center
+    min-height: 80vh
+    width: 50%
+
+.image
+    margin: auto 0
+    width: 380px
+    height: 380px
+    border-radius: 55% 45% 55% 45%
+    overflow: hidden
+    animation: imgFloat 7s ease-in-out infinite
+
+.image img
+    width: 380px
+    height: 380px
+    object-fit: cover
+
+@keyframes imgFloat 
+    50%
+        transform: translateY(30px)
+        border-radius: 40% 60% 40% 60%
