@@ -1,4 +1,5 @@
-import { Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
 import { DeHomeComponent } from './de/pages/de-home/de-home.component';
 import { DeAboutComponent } from './de/pages/de-about/de-about.component';
 import { DeContactComponent } from './de/pages/de-contact/de-contact.component';
@@ -61,3 +62,8 @@ export const routes: Routes = [
     { path: '', redirectTo: 'de/home', pathMatch: 'full' },
 
 ];
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+  })
+  export class AppRoutingModule { }

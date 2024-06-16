@@ -6,23 +6,23 @@
     <div class="nav-menu" id="myNavMenu">
         <ul class="nav_menu_list">
             <li class="nav_list">
-                <a href="de-start" class="nav-link active-link">Home</a>
+                <a href="de-start" routerLink="de-start" routerLinkActive="active-link" class="nav-link">Home</a>
                 <div class="circle"></div>
             </li>
             <li class="nav_list">
-                <a href="de/über-mich" class="nav-link">Über-mich</a>
+                <a href="de/über-mich" routerLink="de/über-mich" routerLinkActive="active-link" class="nav-link">Über-mich</a>
                 <div class="circle"></div>
             </li>
             <li class="nav_list">
-                <a href="de/projekte" class="nav-link">Projekte</a>
+                <a href="de/projekte" routerLink="de/projekte" routerLinkActive="active-link" class="nav-link">Projekte</a>
                 <div class="circle"></div>
             </li>
             <li class="nav_list">
-                <a href="de/kontakt" class="nav-link">Kontakt</a>
+                <a  href="de/kontakt"routerLink="de/kontakt" routerLinkActive="active-link" class="nav-link">Kontakt</a>
                 <div class="circle"></div>
             </li>
             <li class="nav_list">
-                <a href="de/feedback" class="nav-link">Feedback</a>
+                <a href="de/feedback" routerLink="de/feedback" routerLinkActive="active-link" class="nav-link">Feedback</a>
                 <div class="circle"></div>
             </li>
         </ul>
@@ -31,6 +31,6 @@
         <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
     </div>
     <div class="nav-menu-btn">
-        <i class="uil uil-bars" (click)="myMenuFunction()"></i>
+        <i class="uil uil-bars" (click)="toggleMenu()"></i>
     </div>
-  </nav>
+</nav>
