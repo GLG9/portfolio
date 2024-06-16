@@ -92,3 +92,42 @@
     50%
         transform: translateY(30px)
         border-radius: 40% 60% 40% 60%
+
+@keyframes fly-in 
+  from 
+    transform: translateY(-150px)
+    opacity: 0
+  
+  to 
+    transform: translateY(0)
+    opacity: 1
+  
+
+
+.featured-text-card, .featured-name, .featured-text-info, .featured-text-btn, .social_icons, .featured-image 
+  opacity: 0
+  animation: fly-in 2s ease-out forwards
+
+
+.featured-text-card 
+  animation-delay: 0s
+
+
+.featured-name 
+  animation-delay: 0.1s
+
+
+.featured-text-info 
+  animation-delay: 0.2s
+
+
+.featured-text-btn 
+  animation-delay: 0.3s
+
+
+.social_icons 
+  animation-delay: 0.4s
+
+
+.featured-image 
+  animation-delay: 0.4s

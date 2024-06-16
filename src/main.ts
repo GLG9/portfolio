@@ -1,15 +1,11 @@
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+window.onload = function() {
+  window.onscroll = function() { headerShadow(); };
+};
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
-
-
-  window.onscroll = function() {headerShadow()};
-  function headerShadow() {
-    const navHeader =document.getElementById("header");
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop >  50) {
+function headerShadow() {
+  const navHeader = document.getElementById("header");
+  if (navHeader) {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
       navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
       navHeader.style.height = "70px";
       navHeader.style.lineHeight = "70px";
@@ -19,8 +15,9 @@ bootstrapApplication(AppComponent, appConfig)
       navHeader.style.lineHeight = "90px";
     }
   }
+}
 
-  function downloadFile() {
+function downloadFile() {
   const fileName = 'example.txt'; // Dateiname, den du herunterladen möchtest
   const fileContent = 'Dies ist ein Beispielinhalt.'; // Inhalt der herunterzuladenden Datei
 

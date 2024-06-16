@@ -5,16 +5,18 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './de-header.component.html',
-  styleUrl: './de-header.component.sass'
+  styleUrl: './de-header.component.sass',
 })
 export class DeHeaderComponent {
 
-  myMenuFunction(){
-    var menuBtn = document.getElementById("myNavMenu");
-    if(menuBtn.className === "nav-menu"){
-      menuBtn.className += " responsive";
-    } else {
-      menuBtn.className = "nav-menu";
+  myMenuFunction() {
+    const menuBtn = document.getElementById("myNavMenu");
+    if (menuBtn !== null) {
+      if (menuBtn.className === "nav-menu") {
+        menuBtn.className += " responsive";
+      } else {
+        menuBtn.className = "nav-menu";
+      }
     }
   }
 
