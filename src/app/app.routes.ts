@@ -1,5 +1,4 @@
-import { Routes, RouterModule } from '@angular/router';
-import { NgModule } from '@angular/core';
+import { Routes } from '@angular/router';
 import { DeHomeComponent } from './de/pages/de-home/de-home.component';
 import { DeAboutComponent } from './de/pages/de-about/de-about.component';
 import { DeContactComponent } from './de/pages/de-contact/de-contact.component';
@@ -55,15 +54,11 @@ export const routes: Routes = [
     { path: 'de/cv', redirectTo: 'de/lebenslauf', pathMatch: 'full' },
     { path: 'de/projects', redirectTo: 'de/projekte', pathMatch: 'full' },
     { path: 'de/feedback', redirectTo: 'de/feedback', pathMatch: 'full' },
+    { path: 'de/home', redirectTo: 'de/home', pathMatch: 'full' },
 
-    { path: 'de', redirectTo: 'de/home', pathMatch: 'full' },
-    { path: 'en', redirectTo: 'en/home', pathMatch: 'full' },
+    { path: 'de/', redirectTo: 'de/home', pathMatch: 'full' },
+    { path: 'en/', redirectTo: 'en/home', pathMatch: 'full' },
     { path: '**', redirectTo: 'de/home', pathMatch: 'full' },
     { path: '', redirectTo: 'de/home', pathMatch: 'full' },
 
 ];
-@NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
-  })
-  export class AppRoutingModule { }

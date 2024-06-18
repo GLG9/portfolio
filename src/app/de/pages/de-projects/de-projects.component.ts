@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { DeHeaderComponent } from '../../layout/de-header/de-header.component';
 import { DeFooterComponent } from '../../layout/de-footer/de-footer.component';
-import { SharedModule } from '../../layout/shared.module';
 
 @Component({
   selector: 'app-de-projects',
   standalone: true,
   imports: [
-    SharedModule,
+    DeHeaderComponent,
     DeFooterComponent
   ],
   templateUrl: './de-projects.component.html',

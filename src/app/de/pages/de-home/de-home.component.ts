@@ -3,36 +3,40 @@ import { isPlatformBrowser } from '@angular/common';
 import Typed from 'typed.js';
 import { DeHeaderComponent } from '../../layout/de-header/de-header.component';
 import { DeFooterComponent } from '../../layout/de-footer/de-footer.component';
-import { SharedModule } from '../../layout/shared.module';
 
 @Component({
   selector: 'app-de-home',
   standalone: true,
   imports: [
-    SharedModule,
+    DeHeaderComponent,
     DeFooterComponent
   ],
   templateUrl: './de-home.component.html',
   styleUrls: ['./de-home.component.sass']
 })
 export class DeHomeComponent implements AfterViewInit {
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, private renderer: Renderer2) { }
+  options = {
+    strings: ["Full-Stack Entwickler", "Software Entwickler"],
+    loop: true,
+    typeSpeed: 150,
+    backSpeed: 120,
+    backDelay: 2000
+  };
 
-  ngAfterViewInit(): void {
+  constructor(
+    private renderer: Renderer2,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
+
+  ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
-      const options = {
-        strings: ["Full-Stack Entwickler", "Software Entwickler"],
-        loop: true,
-        typeSpeed: 150,
-        backSpeed: 120,
-        backDelay: 2000
-      };
-      const typed = new Typed('.typedText', options);
+      // Initialize Typed.js after the view has been fully initialized
+      new Typed('.typedText', this.options);
     }
   }
 
   downloadFile() {
-    const link = document.createElement('a');
+    const link = this.renderer.createElement('a');
     link.href = 'assets/h.txt';
     link.download = 'h.txt';
     link.click();

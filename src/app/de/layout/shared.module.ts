@@ -1,5 +1,3 @@
-// shared.module.ts
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DeHeaderComponent } from './de-header/de-header.component';
@@ -8,14 +6,18 @@ import { DeFooterComponent } from './de-footer/de-footer.component';
 @NgModule({
   imports: [
     CommonModule,
+    DeHeaderComponent,
+    DeFooterComponent // DeHeaderComponent direkt importieren
   ],
   declarations: [
-    DeHeaderComponent,
-    //DeFooterComponent
+    // DeHeaderComponent entfernen
+    // DeFooterComponent
   ],
   exports: [
     DeHeaderComponent,
-    //DeFooterComponent
+    DeFooterComponent 
+    // DeHeaderComponent direkt exportieren
+    // DeFooterComponent
   ]
 })
 export class SharedModule { }
